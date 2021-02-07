@@ -2,6 +2,19 @@
   max-width: 1190px;
   padding-left: 190px;
   padding-top: 36px;
+  padding-bottom: 110px;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 9px;
+    padding-left: 210px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+    padding-right: 0;
+    padding-top: 14px;
+  }
 }
 
 .about-us__title {
@@ -11,10 +24,102 @@
   font-size: 36px;
   line-height: 51px;
   color: $grey;
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    margin-left: -1px;
+    margin-bottom: 18px;
+  }
 }
 
 .about-us__paragraph {
   font-size: 16px;
   line-height: 22px;
   color: $grey;
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 2px;
+    padding-right: 10px;
+
+    & span {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.about-us__more {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $azure;
+  border: 1px solid $azure;
+  border-radius: 5px;
+  background-color: $basic_white;
+  padding: 13px 49px;
+  margin-top: 20px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 23px;
+    margin-left: 3px;
+  }
+}
+
+.about-us__year {
+  background-image: url("../img/bg-year.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 308px;
+  height: 120px;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 168px;
+  left: -85px;
+
+  @media (max-width: $tablet-width) {
+    width: 355px;
+    height: 150px;
+    top: 141px;
+    left: -78px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+
+  & span {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    color: $basic_black;
+    background: $basic_white;
+    mix-blend-mode: lighten;
+    font-weight: bold;
+    font-size: 154px;
+    line-height: 120px;
+    margin-left: -2px;
+
+    @media (max-width: $tablet-width) {
+      font-size: 178px;
+    line-height: 140px;
+    }
+  }
 }

@@ -349,7 +349,8 @@ html {
     .advantages__wrapper {
       padding-left: 23px;
       padding-right: 23px;
-      padding-top: 54px; } }
+      padding-top: 54px;
+      padding-bottom: 20px; } }
   @media (max-width: 767px) {
     .advantages__wrapper {
       grid-template-columns: 1fr;
@@ -419,7 +420,18 @@ html {
 .about-us__wrapper {
   max-width: 1190px;
   padding-left: 190px;
-  padding-top: 36px; }
+  padding-top: 36px;
+  padding-bottom: 110px;
+  position: relative; }
+  @media (max-width: 1023px) {
+    .about-us__wrapper {
+      padding-top: 9px;
+      padding-left: 210px; } }
+  @media (max-width: 767px) {
+    .about-us__wrapper {
+      padding-left: 15px;
+      padding-right: 0;
+      padding-top: 14px; } }
 
 .about-us__title {
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -427,9 +439,85 @@ html {
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
-  color: #666666; }
+  color: #666666;
+  margin-bottom: 20px; }
+  @media (max-width: 1023px) {
+    .about-us__title {
+      font-size: 32px;
+      line-height: 45px;
+      margin-bottom: 24px; } }
+  @media (max-width: 767px) {
+    .about-us__title {
+      font-size: 28px;
+      margin-left: -1px;
+      margin-bottom: 18px; } }
 
 .about-us__paragraph {
   font-size: 16px;
   line-height: 22px;
-  color: #666666; }
+  color: #666666;
+  margin-bottom: 20px; }
+  @media (max-width: 1023px) {
+    .about-us__paragraph {
+      padding-left: 2px;
+      padding-right: 10px; }
+      .about-us__paragraph span {
+        display: none; } }
+  @media (max-width: 767px) {
+    .about-us__paragraph {
+      margin-bottom: 40px; }
+      .about-us__paragraph:last-of-type {
+        margin-bottom: 5px; } }
+
+.about-us__more {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #00b2ff;
+  border: 1px solid #00b2ff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 13px 49px;
+  margin-top: 20px; }
+  @media (max-width: 1023px) {
+    .about-us__more {
+      margin-top: 23px;
+      margin-left: 3px; } }
+
+.about-us__year {
+  background-image: url("../img/bg-year.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 308px;
+  height: 120px;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 168px;
+  left: -85px; }
+  @media (max-width: 1023px) {
+    .about-us__year {
+      width: 355px;
+      height: 150px;
+      top: 141px;
+      left: -78px; } }
+  @media (max-width: 767px) {
+    .about-us__year {
+      display: none; } }
+  .about-us__year span {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    color: #000000;
+    background: #ffffff;
+    mix-blend-mode: lighten;
+    font-weight: bold;
+    font-size: 154px;
+    line-height: 120px;
+    margin-left: -2px; }
+    @media (max-width: 1023px) {
+      .about-us__year span {
+        font-size: 178px;
+        line-height: 140px; } }
