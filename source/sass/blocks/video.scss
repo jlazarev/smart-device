@@ -1,0 +1,126 @@
+.video {
+  background-color: $dark;
+  padding-top: 96px;
+  color: $basic_white;
+  height: 706px;
+  margin-bottom: 200px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 44px;
+    height: 413px;
+    margin-bottom: 99px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 58px;
+    height: 384px;
+    margin-bottom: 69px;
+  }
+}
+
+.video__title {
+  color: $basic_white;
+  padding-right: 10px;
+  margin-bottom: 19px;
+
+  @media (max-width: $tablet-width) {
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 8px;
+  }
+}
+
+.video__paragraph {
+  text-align: center;
+  width: 340px;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  opacity: 0.7;
+  margin-bottom: 56px;
+
+  @media (max-width: $tablet-width) {
+    width: 430px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: auto;
+    margin-bottom: 53px;
+    min-height: 87px;
+  }
+}
+
+.video__box {
+  width: 929px;
+  height: 522px;
+  margin: 0 auto;
+  background-color: $basic_black;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    width: 503px;
+    height: 282px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+    height: 162px;
+  }
+}
+
+.video__play {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 65px;
+  height: 65px;
+  border: none;
+  border-radius: 50%;
+  background-color: $turquoise;
+
+  &:hover,
+  &:focus {
+    background-color: $hover_btn;
+    cursor: pointer;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+    top: calc(50% - 45px);
+    left: calc(50% - 45px);
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 65px;
+    height: 65px;
+    top: calc(50% - 33px);
+    left: calc(50% - 33px);
+  }
+
+  & svg {
+    position: absolute;
+    top: 23px;
+    left: 28px;
+
+    @media (max-width: $tablet-width) {
+      top: 33px;
+      left: 39px;
+      width: 18px;
+      height: 25px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 23px;
+      left: 28px;
+      width: 14px;
+      height: 20px;
+    }
+  }
+}
