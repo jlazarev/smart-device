@@ -165,7 +165,7 @@
                   <!-- <source type="image/webp" srcset="img/road@1x.webp 1x, img/road@2x.webp 2x"> -->
 
                   <!-- 1x: 342px / 503px; 2x: 684px / 1006px -->
-                  <img class="goods__picture" src="img/production.png" srcset="img/road@2x.jpg 2x" alt="Дорожный велосипед">
+                  <img class="goods__picture" src="img/production.png" srcset="img/road@2x.jpg 2x" alt="Производство печатных плат">
                 </picture>
               </div>
 
@@ -185,7 +185,7 @@
                   <!-- <source type="image/webp" srcset="img/mountain@1x.webp 1x, img/mountain@2x.webp 2x"> -->
 
                   <!-- 1x: 342px / 566px; 2x: 684px / 1132px -->
-                  <img class="goods__picture" src="img/mounting.png" srcset="img/mountain@2x.jpg 2x" alt="Горный велосипед">
+                  <img class="goods__picture" src="img/mounting.png" srcset="img/mountain@2x.jpg 2x" alt="Монтаж печатных плат">
                 </picture>
               </div>
 
@@ -205,7 +205,7 @@
                   <!-- <source type="image/webp" srcset="img/child@1x.webp 1x, img/child@2x.webp 2x"> -->
 
                   <!-- 1x: 342px / 513px; 2x: 684px / 1026px -->
-                  <img class="goods__picture" src="img/accessories.png" srcset="img/child@2x.jpg 2x" alt="Детский велосипед">
+                  <img class="goods__picture" src="img/accessories.png" srcset="img/child@2x.jpg 2x" alt="Комплектующие для светотехники">
                 </picture>
               </div>
 
@@ -220,28 +220,27 @@
       </div>
     </section>
 
-    <section class="video visually-hidden" id="video">
-      <div class="video__wrapper wrapper">
-        <h2 class="video__title title">Видео про велосипеды</h2>
+    <section class="feedback">
+      <div class="feedback__wrapper wrapper">
+        <div class="feedback__block">
+          <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
 
-        <p class="video__paragraph">
-          В этом видео мы подробно расскажем про особенности выбора велосипеда для себя
-        </p>
+          <span class="feedback__description">Мы проконсультируем Вас бесплатно</span>
 
-        <div class="video__box">
-          <picture>
-            <!-- <source type="image/webp" srcset="img/bg-video@1x.webp 1x, img/bg-video@2x.webp 2x"> -->
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="GET">
+            <label class="visually-hidden" for="name">Введите ваше имя:</label>
+            <input id="name" type="text" name="name" placeholder="Имя" required>
 
-            <!-- 1x: 929px / 522px; 2x: 1858px / 1044px -->
-            <img src="img/bg-video@1x.jpg" srcset="img/bg-video@2x.jpg 2x" alt="видео">
-          </picture>
+            <label class="visually-hidden" for="tel">Введите номер телефона:</label>
+            <input id="tel" type="tel" name="tel" placeholder="Телефон" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
 
-          <button class="video__play" type="button">
-            <span class="visually-hidden">воспроизвести</span>
-            <svg width="14" height="20">
-              <use xlink:href="img/sprite_auto.svg#icon-play"></use>
-            </svg>
-          </button>
+            <textarea name="question" placeholder="Ваш вопрос"></textarea>
+
+            <input class="feedback__consent visually-hidden" id="consent" type="checkbox" name="consent" checked>
+            <label for="consent">Я согласен на обработку  персональных данных</label>
+
+            <button class="feedback__button" type="submit">Задать вопрос</button>
+          </form>
         </div>
       </div>
     </section>

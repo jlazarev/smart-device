@@ -5,16 +5,18 @@
 .goods__wrapper {
   max-width: 1230px;
   padding-top: 60px;
-  padding-bottom: 87px;
+  padding-bottom: 82px;
 
   @media (max-width: $tablet-width) {
     padding-top: 24px;
+    padding-bottom: 31px;
   }
 
   @media (max-width: $mobile-width) {
     padding-left: 1px;
     padding-right: 8px;
     padding-top: 27px;
+    padding-bottom: 34px;
   }
 }
 
@@ -118,6 +120,10 @@
     @media (max-width: $tablet-width) {
       width: 100%;
       margin-top: -66%;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-top: -40%;
     }
   }
 }
