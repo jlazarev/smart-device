@@ -16,6 +16,11 @@
 
   @media (max-width: $tablet-width) {
     background-image: none;
+    min-height: 664px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 640px;
   }
 }
 
