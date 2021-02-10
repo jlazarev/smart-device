@@ -58,7 +58,6 @@
     flex-direction: column;
     justify-content: flex-start;
   }
-
 }
 
 .goods__item {
@@ -84,6 +83,14 @@
     width: 100%;
     height: 256px;
     overflow: hidden;
+  }
+
+  &:hover .goods__name {
+    text-shadow: 0 0 4px $basic_black;
+  }
+
+  &:hover .goods__box {
+    opacity: 1;
   }
 }
 

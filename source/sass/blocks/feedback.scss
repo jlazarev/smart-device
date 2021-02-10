@@ -2,7 +2,7 @@
   min-height: 670px;
   background-color: $azure;
   background-image:
-    url("../img/paper-airplane.png"),
+    url("../img/paper-airplane@1x.png"),
     url("../img/polygon.svg");
   background-repeat:
     no-repeat,
@@ -13,6 +13,12 @@
   background-size:
     auto,
     auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/paper-airplane@2x.png"),
+      url("../img/polygon.svg");
+  }
 
   @media (max-width: $tablet-width) {
     background-image: none;
@@ -155,6 +161,10 @@
     font-size: 16px;
     line-height: 22px;
   }
+}
+
+.feedback__form .feedback__consent {
+  width: 0;
 }
 
 .feedback__consent + label {

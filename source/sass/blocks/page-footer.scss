@@ -15,7 +15,7 @@
 
   @media (max-width: $mobile-width) {
     padding-top: 43px;
-    padding-bottom: 26px;
+    padding-bottom: 0;
   }
 }
 
@@ -34,7 +34,7 @@
   @media (max-width: $mobile-width) {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
 }
 
@@ -42,9 +42,9 @@
   padding: 3px;
   display: flex;
   color: $logo_dark;
-  margin-right: auto;
   margin-bottom: 50px;
   margin-right: 20px;
+  text-decoration: none;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 21px;
@@ -153,6 +153,7 @@
   @media (max-width: $mobile-width) {
     padding-left: 13px;
     padding-bottom: 2px;
+    padding-top: 25px;
     margin-right: 0;
     width: 100%;
     border-bottom: 1px solid rgba($border, 0.2);
@@ -173,7 +174,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    display: none;
+    padding-bottom: 20px;
   }
 
   & a {
@@ -198,6 +199,7 @@
   @media (max-width: $mobile-width) {
     padding-left: 13px;
     padding-top: 24px;
+    width: 100%;
   }
 
   & address,
@@ -209,6 +211,10 @@
     color: $bg_dark;
     opacity: 0.5;
     text-decoration: none;
+  }
+
+  & a:last-child {
+    margin-bottom: 26px;
   }
 
   & address {
@@ -276,4 +282,61 @@
       margin-left: 0;
     }
   }
+}
+
+// accordoin
+
+.page-footer__accordion {
+  position: relative;
+}
+
+.page-footer__switch {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    position: absolute;
+    top: 29px;
+    right: 17px;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    overflow: visible;
+
+    // outline: 2px solid tomato;
+
+    &::before {
+      content: "";
+      margin-top: 7px;
+      width: 100%;
+      height: 1px;
+      background-color: $btn_grey;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      width: 1px;
+      height: 100%;
+      background-color: $btn_grey;
+      display: none;
+    }
+  }
+}
+
+.page-footer__accordion--close {
+  & ul,
+  & a,
+  & address {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+}
+
+.page-footer__accordion--close .page-footer__switch::after {
+  display: block;
 }

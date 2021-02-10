@@ -6,15 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="Description" content="Производство и монтаж, поставка комплектующих, блоков и модулей.">
   <title>HTML Academy: Smart Device</title>
-  <!-- <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font">
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-300.woff2" as="font">
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-600.woff2" as="font">
-  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font"> -->
+  <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
 <body class="page__body">
-  <header class="page-header page-header--close-menu page-header--nojs">
+  <header class="page-header page-header--nojs">
     <div class="page-header__wrapper wrapper">
       <a class="page-header__logo">
         <svg width="52" height="52">
@@ -56,15 +55,19 @@
             производство и монтаж, поставка комплектующих, блоков и модулей
           </p>
 
-          <button class="promo__button">
+          <a class="promo__button link-scroll" href="#feedback">
             <span class="promo__button-long">получить бесплатную консультацию</span>
             <span class="promo__button-short">бесплатная консультация</span>
-          </button>
+          </a>
+
+          <a class="promo__link-down link-scroll" href="#advantages">
+            Скролл вниз
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <h2 class="visually-hidden">Наши преимущества</h2>
 
       <ul class="advantages__wrapper wrapper">
@@ -162,10 +165,10 @@
 
               <div class="goods__box">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/road@1x.webp 1x, img/road@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/production@1x.webp 1x, img/production@2x.webp 2x">
 
-                  <!-- 1x: 342px / 503px; 2x: 684px / 1006px -->
-                  <img class="goods__picture" src="img/production.png" srcset="img/road@2x.jpg 2x" alt="Производство печатных плат">
+                  <!-- 1x: 370px / 620px; 2x: 740px / 1240px -->
+                  <img class="goods__picture" src="img/production@1x.png" srcset="img/production@2x.png 2x" alt="Производство печатных плат">
                 </picture>
               </div>
 
@@ -182,10 +185,10 @@
 
               <div class="goods__box">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/mountain@1x.webp 1x, img/mountain@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/mounting@1x.webp 1x, img/mounting@2x.webp 2x">
 
-                  <!-- 1x: 342px / 566px; 2x: 684px / 1132px -->
-                  <img class="goods__picture" src="img/mounting.png" srcset="img/mountain@2x.jpg 2x" alt="Монтаж печатных плат">
+                  <!-- 1x: 370px / 620px; 2x: 740px / 1240px -->
+                  <img class="goods__picture" src="img/mounting@1x.png" srcset="img/mounting@2x.png 2x" alt="Монтаж печатных плат">
                 </picture>
               </div>
 
@@ -202,10 +205,10 @@
 
               <div class="goods__box">
                 <picture>
-                  <!-- <source type="image/webp" srcset="img/child@1x.webp 1x, img/child@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/accessories@1x.webp 1x, img/accessories@2x.webp 2x">
 
-                  <!-- 1x: 342px / 513px; 2x: 684px / 1026px -->
-                  <img class="goods__picture" src="img/accessories.png" srcset="img/child@2x.jpg 2x" alt="Комплектующие для светотехники">
+                  <!-- 1x: 370px / 620px; 2x: 740px / 1240px -->
+                  <img class="goods__picture" src="img/accessories@1x.png" srcset="img/accessories@2x.png 2x" alt="Комплектующие для светотехники">
                 </picture>
               </div>
 
@@ -220,7 +223,7 @@
       </div>
     </section>
 
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <div class="feedback__wrapper wrapper">
         <div class="feedback__block">
           <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
@@ -232,9 +235,9 @@
             <input id="name" type="text" name="name" placeholder="Имя" required>
 
             <label class="visually-hidden" for="tel">Введите номер телефона:</label>
-            <input id="tel" type="tel" name="tel" placeholder="Телефон" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
+            <input class="input-mask" id="tel" type="tel" name="tel" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" minlength="16" maxlength="16" placeholder="Телефон" required>
 
-            <textarea name="question" placeholder="Ваш вопрос"></textarea>
+            <textarea id="text-question" name="question" placeholder="Ваш вопрос"></textarea>
 
             <input class="feedback__consent visually-hidden" id="consent" type="checkbox" name="consent" checked>
             <label for="consent">Я согласен на обработку  персональных данных</label>
@@ -247,9 +250,11 @@
   </main>
 
   <footer class="page-footer">
+    <h2 class="visually-hidden">Вспомогательная информация</h2>
+
     <div class="page-footer__wrapper wrapper">
       <div class="page-footer__block">
-        <a class="page-footer__logo">
+        <a class="page-footer__logo" href="#">
           <svg width="52" height="52">
             <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
           </svg>
@@ -289,8 +294,10 @@
         </ul>
       </div>
 
-      <nav class="page-footer__nav">
+      <nav class="page-footer__nav page-footer__accordion page-footer__accordion--close">
         <h3 class="page-footer__title">разделы сайта</h3>
+
+        <button class="page-footer__switch"></button>
 
         <ul class="page-footer__nav-list">
           <li><a href="#">О компании</a></li>
@@ -303,8 +310,10 @@
         </ul>
       </nav>
 
-      <div class="page-footer__office">
+      <div class="page-footer__office page-footer__accordion">
         <h3 class="page-footer__title">наш офис</h3>
+
+        <button class="page-footer__switch"></button>
 
         <address>
           г. Мытищи, Олимпийский проспект, д.10
@@ -326,28 +335,28 @@
     </div>
   </footer>
 
-  <div class="popap popap--close">
-    <div class="popap__wrapper">
-      <h2 class="popap__title">Закажите звонок</h2>
+  <div class="popup">
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Закажите звонок</h2>
 
-      <span class="popap__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
+      <span class="popup__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
 
-      <form class="popap__form" action="https://echo.htmlacademy.ru" method="GET">
-        <label class="visually-hidden" for="name">Введите ваше имя:</label>
-        <input id="name" type="text" name="name" placeholder="Имя" required>
+      <form class="popup__form" action="https://echo.htmlacademy.ru" method="GET">
+        <label class="visually-hidden" for="name-popup">Введите ваше имя:</label>
+        <input id="name-popup" type="text" name="name" placeholder="Имя" required>
 
-        <label class="visually-hidden" for="tel">Введите номер телефона:</label>
-        <input id="tel" type="tel" name="tel" placeholder="Телефон" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
+        <label class="visually-hidden" for="tel-popup">Введите номер телефона:</label>
+        <input class="input-mask" id="tel-popup" type="tel" name="tel" placeholder="Телефон" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
 
         <textarea name="question" placeholder="Ваш вопрос"></textarea>
 
-        <input class="popap__consent visually-hidden" id="consent-popap" type="checkbox" name="consent" checked>
-        <label for="consent-popap">Я согласен на обработку  персональных данных</label>
+        <input class="popup__consent visually-hidden" id="consent-popup" type="checkbox" name="consent" checked>
+        <label for="consent-popup">Я согласен на обработку  персональных данных</label>
 
-        <button class="popap__button" type="submit">Отправить</button>
+        <button class="popup__button" type="submit">Отправить</button>
       </form>
 
-      <button class="popap__close-btn" type="button">
+      <button class="popup__close-btn" type="button">
         <svg width="17" height="17">
           <use xlink:href="img/sprite_auto.svg#icon-close-btn"></use>
         </svg>

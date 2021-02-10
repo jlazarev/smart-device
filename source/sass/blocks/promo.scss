@@ -4,7 +4,7 @@
   color: $basic_white;
   padding-top: 314px;
   background-image:
-    url("../img/circuit-boards.png"),
+    url("../img/circuit-boards@1x.png"),
     url("../img/polygon.svg"),
     url("../img/bg-waves.png");
   background-repeat:
@@ -19,6 +19,13 @@
     auto,
     auto,
     cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/circuit-boards@2x.png"),
+      url("../img/polygon.svg"),
+      url("../img/bg-waves.png");
+  }
 
   @media (max-width: $tablet-width) {
     padding-top: 188px;
@@ -62,6 +69,7 @@
 
 .promo__block {
   margin-right: 450px;
+  position: relative;
 
   @media (max-width: $tablet-width) {
     margin-right: 130px;
@@ -154,6 +162,10 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $basic_white;
+  display: block;
+  padding: 10px;
+  padding-top: 17px;
+  text-decoration: none;
 
   @media (max-width: $tablet-width) {
     margin-left: 51px;
@@ -179,5 +191,21 @@
 
   @media (max-width: $mobile-width) {
     display: inline;
+  }
+}
+
+.promo__link-down {
+  position: absolute;
+  bottom: -148px;
+  left: -34px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic_white;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  text-decoration: none;
+
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
