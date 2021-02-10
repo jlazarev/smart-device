@@ -167,6 +167,16 @@
   padding-top: 17px;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    box-shadow: 0 0 0 1px $basic_white;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (max-width: $tablet-width) {
     margin-left: 51px;
     margin-top: 55px;
@@ -204,6 +214,16 @@
   opacity: 0.5;
   transform: rotate(-90deg);
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $azure;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (max-width: $tablet-width) {
     display: none;

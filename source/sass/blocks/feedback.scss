@@ -114,6 +114,12 @@
   font-size: 16px;
   line-height: 22px;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px 5px rgba($basic_white, 0.8);
+    outline: none;
+  }
+
   @media (max-width: $mobile-width) {
     width: 100%;
     margin-bottom: 31px;
@@ -144,6 +150,12 @@
   font-size: 16px;
   line-height: 22px;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px 5px rgba($basic_white, 0.8);
+    outline: none;
+  }
+
   @media (max-width: $tablet-width) {
     min-height: 163px;
   }
@@ -165,6 +177,11 @@
 
 .feedback__form .feedback__consent {
   width: 0;
+
+  &:focus + label::before {
+    box-shadow: 0 0 5px 5px rgba($basic_white, 0.8);
+    outline: none;
+  }
 }
 
 .feedback__consent + label {
@@ -176,6 +193,11 @@
   line-height: 16px;
   color: rgba($basic_white, 0.8);
   position: relative;
+  cursor: pointer;
+
+  &:hover::before {
+    box-shadow: 0 0 5px 5px rgba($basic_white, 0.8);
+  }
 
   @media (max-width: $mobile-width) {
     width: 100%;
@@ -214,6 +236,16 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $basic_white;
+
+  &:hover,
+  &:focus {
+    background-color: $basic_white;
+    color: $azure;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (max-width: $mobile-width) {
     width: 100%;

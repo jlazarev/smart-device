@@ -41,7 +41,7 @@
         </a>
       </div>
 
-      <button class="page-header__callback" type="button">заказать звонок</button>
+      <a class="page-header__callback" href="callback.html" type="button">заказать звонок</a>
     </div>
   </header>
 
@@ -294,7 +294,7 @@
         </ul>
       </div>
 
-      <nav class="page-footer__nav page-footer__accordion page-footer__accordion--close">
+      <nav class="page-footer__nav page-footer__accordion page-footer__accordion--close no-js">
         <h3 class="page-footer__title">разделы сайта</h3>
 
         <button class="page-footer__switch"></button>
@@ -310,7 +310,7 @@
         </ul>
       </nav>
 
-      <div class="page-footer__office page-footer__accordion">
+      <div class="page-footer__office page-footer__accordion no-js">
         <h3 class="page-footer__title">наш офис</h3>
 
         <button class="page-footer__switch"></button>
@@ -348,7 +348,7 @@
         <label class="visually-hidden" for="tel-popup">Введите номер телефона:</label>
         <input class="input-mask" id="tel-popup" type="tel" name="tel" placeholder="Телефон" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
 
-        <textarea name="question" placeholder="Ваш вопрос"></textarea>
+        <textarea id="popup-question" name="question" placeholder="Ваш вопрос"></textarea>
 
         <input class="popup__consent visually-hidden" id="consent-popup" type="checkbox" name="consent" checked>
         <label for="consent-popup">Я согласен на обработку  персональных данных</label>

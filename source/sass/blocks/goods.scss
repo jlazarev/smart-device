@@ -85,12 +85,18 @@
     overflow: hidden;
   }
 
-  &:hover .goods__name {
+  &:hover .goods__name,
+  &:focus .goods__name {
     text-shadow: 0 0 4px $basic_black;
   }
 
-  &:hover .goods__box {
+  &:hover .goods__box,
+  &:focus .goods__box {
     opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

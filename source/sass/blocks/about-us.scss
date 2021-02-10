@@ -81,6 +81,16 @@
   padding: 13px 49px;
   margin-top: 20px;
 
+  &:hover,
+  &:focus {
+    background-color: $azure;
+    color: $basic_white;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (max-width: $tablet-width) {
     margin-top: 23px;
     margin-left: 3px;
