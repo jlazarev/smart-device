@@ -30,6 +30,16 @@
   margin-right: auto;
 
   & svg {
+    fill: $basic_white;
+
+    & g {
+      display: none;
+    }
+
+    &:hover {
+      fill: $azure;
+    }
+
     @media (max-width: $mobile-width) {
       width: 38px;
       height: 38px;
@@ -37,34 +47,17 @@
   }
 }
 
-.page-header__logo-text {
-  margin-left: 16px;
-  margin-top: 6px;
-}
-
-.page-header__logo-title {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 27px;
-  display: block;
-
+.page-header__logo-big {
   @media (max-width: $mobile-width) {
     display: none;
   }
 }
 
-.page-header__logo-description {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 12px;
-  color: $grey_logo;
-  letter-spacing: 0.9px;
+.page-header__logo-small {
+  display: none;
 
   @media (max-width: $mobile-width) {
-    display: none;
+    display: inline;
   }
 }
 

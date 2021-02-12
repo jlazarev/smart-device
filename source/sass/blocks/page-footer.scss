@@ -46,8 +46,8 @@
   margin-right: 20px;
   text-decoration: none;
 
-  &:hover .page-footer__logo-text,
-  &:focus .page-footer__logo-text {
+  &:hover,
+  &:focus {
     color: $azure;
   }
 
@@ -63,29 +63,6 @@
     margin-right: 0;
     margin-bottom: 4px;
   }
-}
-
-.page-footer__logo-text {
-  margin-left: 16px;
-  margin-top: 6px;
-}
-
-.page-footer__logo-title {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 27px;
-  display: block;
-}
-
-.page-footer__logo-description {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 12px;
-  color: $grey_logo;
-  letter-spacing: 0.9px;
 }
 
 .page-footer__date {
@@ -264,13 +241,6 @@
   }
 }
 
-.page-footer__border {
-  opacity: 0.2;
-  background-color: $border;
-  width: auto;
-  height: 1px;
-}
-
 .page-footer__copyright {
   max-width: 1450px;
   min-height: 52px;
@@ -286,6 +256,7 @@
   text-transform: uppercase;
   color: $bg_dark;
   opacity: 0.5;
+  border-top: 1px solid rgba($border, 0.2);
 
   @media (max-width: $tablet-width) {
     padding-right: 24px;
@@ -293,8 +264,8 @@
     padding-top: 21px;
     padding-bottom: 21px;
 
-    & span:first-child,
-    & span:nth-child(2) {
+    & .page-footer__all-right,
+    & .page-footer__date-down {
       display: none;
     }
   }
@@ -305,8 +276,11 @@
     padding-top: 28px;
   }
 
-  & span {
+  & span,
+  & a {
     margin-right: 100px;
+    text-decoration: none;
+    color: $bg_dark;
 
     @media (max-width: $mobile-width) {
       margin-right: 0;
@@ -314,7 +288,16 @@
     }
   }
 
-  & span:last-child {
+  & a:hover,
+  & a:focus {
+    color: $azure;
+  }
+
+  & a:active {
+    opacity: 0.5;
+  }
+
+  & a:last-child {
     margin-left: auto;
     margin-right: 0;
 
@@ -381,11 +364,11 @@
 
 // no-js
 
-.no-js .page-footer__switch {
+.page-footer__accordion--no-js .page-footer__switch {
   display: none;
 }
 
-.page-footer__accordion.no-js {
+.page-footer__accordion--no-js {
   & ul,
   & a,
   & address {

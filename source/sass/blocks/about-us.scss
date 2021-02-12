@@ -80,6 +80,9 @@
   background-color: $basic_white;
   padding: 13px 49px;
   margin-top: 20px;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
 
   &:hover,
   &:focus {

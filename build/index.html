@@ -16,13 +16,12 @@
   <header class="page-header page-header--nojs">
     <div class="page-header__wrapper wrapper">
       <a class="page-header__logo">
-        <svg width="52" height="52">
+        <svg class="page-header__logo-big" width="201" height="52">
+          <use xlink:href="img/sprite_auto.svg#icon-logo-up"></use>
+        </svg>
+        <svg class="page-header__logo-small" width="38" height="38">
           <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
         </svg>
-        <div class="page-header__logo-text">
-          <span class="page-header__logo-title">Smart Device</span>
-          <span class="page-header__logo-description">умные технологии</span>
-        </div>
       </a>
 
       <div class="page-header__contacts">
@@ -41,7 +40,7 @@
         </a>
       </div>
 
-      <a class="page-header__callback" href="callback.html" type="button">заказать звонок</a>
+      <a class="page-header__callback" href="callback.html">заказать звонок</a>
     </div>
   </header>
 
@@ -146,7 +145,7 @@
           </span>
         </p>
 
-        <button class="about-us__more">подробнее</button>
+        <a class="about-us__more" href="#">подробнее</a>
 
         <div class="about-us__year">
           <span>2005</span>
@@ -255,13 +254,9 @@
     <div class="page-footer__wrapper wrapper">
       <div class="page-footer__block">
         <a class="page-footer__logo" href="#">
-          <svg width="52" height="52">
-            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+          <svg width="215" height="52">
+            <use xlink:href="img/sprite_auto.svg#icon-logo-down"></use>
           </svg>
-          <div class="page-footer__logo-text">
-            <span class="page-footer__logo-title">Service Device</span>
-            <span class="page-footer__logo-description">умные технологии</span>
-          </div>
         </a>
 
         <span class="page-footer__date">1999-2018 SD Service Devices</span>
@@ -294,10 +289,12 @@
         </ul>
       </div>
 
-      <nav class="page-footer__nav page-footer__accordion page-footer__accordion--close no-js">
+      <nav class="page-footer__nav page-footer__accordion page-footer__accordion--close page-footer__accordion--no-js">
         <h3 class="page-footer__title">разделы сайта</h3>
 
-        <button class="page-footer__switch"></button>
+        <button class="page-footer__switch">
+          <span class="visually-hidden">переключатель состояния</span>
+        </button>
 
         <ul class="page-footer__nav-list">
           <li><a href="#">О компании</a></li>
@@ -310,10 +307,12 @@
         </ul>
       </nav>
 
-      <div class="page-footer__office page-footer__accordion no-js">
+      <div class="page-footer__office page-footer__accordion page-footer__accordion--no-js">
         <h3 class="page-footer__title">наш офис</h3>
 
-        <button class="page-footer__switch"></button>
+        <button class="page-footer__switch">
+          <span class="visually-hidden">переключатель состояния</span>
+        </button>
 
         <address>
           г. Мытищи, Олимпийский проспект, д.10
@@ -328,10 +327,10 @@
     <div class="page-footer__border"></div>
 
     <div class="page-footer__copyright">
-      <span>Все права защищены</span>
-      <span>1999-2018 SD Service Devices</span>
-      <span>Условия конфиденциальности</span>
-      <span>Developed by wow studio </span>
+      <span class="page-footer__all-right">Все права защищены</span>
+      <span class="page-footer__date-down">1999-2018 SD Service Devices</span>
+      <a href="#">Условия конфиденциальности</a>
+      <a href="#">Developed by wow studio </a>
     </div>
   </footer>
 
@@ -357,6 +356,7 @@
       </form>
 
       <button class="popup__close-btn" type="button">
+        <span class="visually-hidden">закрыть</span>
         <svg width="17" height="17">
           <use xlink:href="img/sprite_auto.svg#icon-close-btn"></use>
         </svg>

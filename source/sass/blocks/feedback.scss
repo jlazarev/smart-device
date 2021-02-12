@@ -18,6 +18,9 @@
     background-image:
       url("../img/paper-airplane@2x.png"),
       url("../img/polygon.svg");
+    background-size:
+      511px,
+      auto;
   }
 
   @media (max-width: $tablet-width) {

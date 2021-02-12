@@ -25,6 +25,10 @@
       url("../img/circuit-boards@2x.png"),
       url("../img/polygon.svg"),
       url("../img/bg-waves.png");
+    background-size:
+      705px,
+      auto,
+      cover;
   }
 
   @media (max-width: $tablet-width) {
