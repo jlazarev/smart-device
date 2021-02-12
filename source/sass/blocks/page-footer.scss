@@ -242,6 +242,10 @@
 }
 
 .page-footer__copyright {
+  border-top: 1px solid rgba($border, 0.2);
+}
+
+.page-footer__copyright-wrapper {
   max-width: 1450px;
   min-height: 52px;
   margin: 0 auto;
@@ -256,7 +260,6 @@
   text-transform: uppercase;
   color: $bg_dark;
   opacity: 0.5;
-  border-top: 1px solid rgba($border, 0.2);
 
   @media (max-width: $tablet-width) {
     padding-right: 24px;

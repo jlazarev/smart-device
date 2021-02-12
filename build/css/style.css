@@ -1085,6 +1085,9 @@ html {
       margin-top: 7px; } }
 
 .page-footer__copyright {
+  border-top: 1px solid rgba(98, 105, 98, 0.2); }
+
+.page-footer__copyright-wrapper {
   max-width: 1450px;
   min-height: 52px;
   margin: 0 auto;
@@ -1098,42 +1101,41 @@ html {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #1b2d37;
-  opacity: 0.5;
-  border-top: 1px solid rgba(98, 105, 98, 0.2); }
+  opacity: 0.5; }
   @media (max-width: 1023px) {
-    .page-footer__copyright {
+    .page-footer__copyright-wrapper {
       padding-right: 24px;
       padding-left: 27px;
       padding-top: 21px;
       padding-bottom: 21px; }
-      .page-footer__copyright .page-footer__all-right,
-      .page-footer__copyright .page-footer__date-down {
+      .page-footer__copyright-wrapper .page-footer__all-right,
+      .page-footer__copyright-wrapper .page-footer__date-down {
         display: none; } }
   @media (max-width: 767px) {
-    .page-footer__copyright {
+    .page-footer__copyright-wrapper {
       flex-direction: column;
       align-items: center;
       padding-top: 28px; } }
-  .page-footer__copyright span,
-  .page-footer__copyright a {
+  .page-footer__copyright-wrapper span,
+  .page-footer__copyright-wrapper a {
     margin-right: 100px;
     text-decoration: none;
     color: #1b2d37; }
     @media (max-width: 767px) {
-      .page-footer__copyright span,
-      .page-footer__copyright a {
+      .page-footer__copyright-wrapper span,
+      .page-footer__copyright-wrapper a {
         margin-right: 0;
         margin-bottom: 21px; } }
-  .page-footer__copyright a:hover,
-  .page-footer__copyright a:focus {
+  .page-footer__copyright-wrapper a:hover,
+  .page-footer__copyright-wrapper a:focus {
     color: #00b2ff; }
-  .page-footer__copyright a:active {
+  .page-footer__copyright-wrapper a:active {
     opacity: 0.5; }
-  .page-footer__copyright a:last-child {
+  .page-footer__copyright-wrapper a:last-child {
     margin-left: auto;
     margin-right: 0; }
     @media (max-width: 767px) {
-      .page-footer__copyright a:last-child {
+      .page-footer__copyright-wrapper a:last-child {
         margin-left: 0; } }
 
 .page-footer__accordion {
