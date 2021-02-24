@@ -188,8 +188,9 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: calc(100% - 3px);
-    margin-left: 3px;
+    width: 287px;
+    // margin-left: 3px;
+    margin: 0 auto;
     margin-top: 40px;
   }
 }

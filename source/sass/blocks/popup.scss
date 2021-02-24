@@ -61,6 +61,12 @@
   font-size: 16px;
   line-height: 22px;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px 5px rgba($basic_white, 0.8);
+    outline: none;
+  }
+
   &::placeholder {
     color: $basic_white;
     font-family: "PT Mono", "Courier New", monospace;
@@ -86,6 +92,12 @@
   font-size: 16px;
   line-height: 22px;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px 5px rgba($basic_white, 0.8);
+    outline: none;
+  }
+
   &::placeholder {
     color: $basic_white;
     font-family: "PT Mono", "Courier New", monospace;
@@ -105,6 +117,10 @@
   line-height: 16px;
   color: rgba($basic_white, 0.8);
   position: relative;
+
+  &:hover::before {
+    box-shadow: 0 0 5px 5px rgba($basic_white, 0.8);
+  }
 
   &::before {
     content: "";
@@ -139,6 +155,16 @@
   text-transform: uppercase;
   color: $basic_white;
   margin-bottom: 26px;
+
+  &:hover,
+  &:focus {
+    background-color: $basic_white;
+    color: $azure;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .popup__close-btn {

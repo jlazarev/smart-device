@@ -111,9 +111,24 @@
   var addSwitch = function (block) {
     var switcher = block.querySelector('.page-footer__switch');
 
-    switcher.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      block.classList.toggle('page-footer__accordion--close');
+    var closePopup = function (evt) {
+      if (!(block.classList.contains('page-footer__accordion--close'))) {
+        evt.stopPropagation();
+
+        block.classList.add('page-footer__accordion--close');
+
+        switcher.removeEventListener('click', closePopup);
+      }
+    };
+
+    block.addEventListener('click', function () {
+      for (var h = 0; h < accordions.length; h++) {
+        accordions[h].classList.add('page-footer__accordion--close');
+      }
+
+      block.classList.remove('page-footer__accordion--close');
+
+      switcher.addEventListener('click', closePopup);
     });
   };
 

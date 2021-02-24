@@ -236,9 +236,10 @@
             <label class="visually-hidden" for="tel">Введите номер телефона:</label>
             <input class="input-mask" id="tel" type="tel" name="tel" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" minlength="16" maxlength="16" placeholder="Телефон" required>
 
+            <label class="visually-hidden" for="text-question">Задайте ваш вопрос:</label>
             <textarea id="text-question" name="question" placeholder="Ваш вопрос"></textarea>
 
-            <input class="feedback__consent visually-hidden" id="consent" type="checkbox" name="consent" checked>
+            <input class="feedback__consent visually-hidden" id="consent" type="checkbox" name="consent" required checked>
             <label for="consent">Я согласен на обработку  персональных данных</label>
 
             <button class="feedback__button" type="submit">Задать вопрос</button>
@@ -304,10 +305,26 @@
           <li><a href="#">Комплектующие</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
+
+
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Продукты</a></li>
+          <li><a href="#">Производство печатных плат</a></li>
+          <li><a href="#">Монтаж печатных плат</a></li>
+          <li><a href="#">Комплектующие</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Продукты</a></li>
+          <li><a href="#">Производство печатных плат</a></li>
+          <li><a href="#">Монтаж печатных плат</a></li>
+          <li><a href="#">Комплектующие</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
 
-      <div class="page-footer__office page-footer__accordion page-footer__accordion--no-js">
+      <div class="page-footer__office page-footer__accordion page-footer__accordion--close page-footer__accordion--no-js">
         <h3 class="page-footer__title">наш офис</h3>
 
         <button class="page-footer__switch">
@@ -345,11 +362,11 @@
         <input id="name-popup" type="text" name="name" placeholder="Имя" required>
 
         <label class="visually-hidden" for="tel-popup">Введите номер телефона:</label>
-        <input class="input-mask" id="tel-popup" type="tel" name="tel" placeholder="Телефон" pattern="[^A-Za-zА-Яа-яЁё]+$" required>
+        <input class="input-mask" id="tel-popup" type="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}" minlength="16" maxlength="16" required>
 
         <textarea id="popup-question" name="question" placeholder="Ваш вопрос"></textarea>
 
-        <input class="popup__consent visually-hidden" id="consent-popup" type="checkbox" name="consent" checked>
+        <input class="popup__consent visually-hidden" id="consent-popup" type="checkbox" name="consent" required checked>
         <label for="consent-popup">Я согласен на обработку  персональных данных</label>
 
         <button class="popup__button" type="submit">Отправить</button>

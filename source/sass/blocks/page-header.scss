@@ -7,7 +7,7 @@
 
 .page-header__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   max-width: 1470px;
   padding: 0 25px;
   padding-top: 30px;
@@ -63,6 +63,7 @@
 
 .page-header__contacts {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
   align-items: baseline;
   padding-top: 20px;
@@ -87,6 +88,7 @@
   margin-left: 80px;
   padding-left: 42px;
   position: relative;
+  margin-bottom: 10px;
 
   &:hover,
   &:focus {
@@ -169,6 +171,7 @@
   margin-top: 7px;
   padding-top: 15px;
   text-decoration: none;
+  flex-shrink: 0;
 
   &:hover,
   &:focus {

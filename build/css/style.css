@@ -78,7 +78,7 @@ html {
 
 .page-header__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   max-width: 1470px;
   padding: 0 25px;
   padding-top: 30px; }
@@ -119,6 +119,7 @@ html {
 
 .page-header__contacts {
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
   align-items: baseline;
   padding-top: 20px;
@@ -139,7 +140,8 @@ html {
   text-decoration: none;
   margin-left: 80px;
   padding-left: 42px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 10px; }
   .page-header__contact:hover, .page-header__contact:focus {
     color: #00b2ff;
     opacity: 1; }
@@ -200,7 +202,8 @@ html {
   margin-right: 6px;
   margin-top: 7px;
   padding-top: 15px;
-  text-decoration: none; }
+  text-decoration: none;
+  flex-shrink: 0; }
   .page-header__callback:hover, .page-header__callback:focus {
     background-color: #00b2ff; }
   .page-header__callback:active {
@@ -343,8 +346,8 @@ html {
       width: 379px; } }
   @media (max-width: 767px) {
     .promo__button {
-      width: calc(100% - 3px);
-      margin-left: 3px;
+      width: 287px;
+      margin: 0 auto;
       margin-top: 40px; } }
 
 @media (max-width: 767px) {
@@ -735,6 +738,7 @@ html {
       padding-top: 53px; } }
   @media (max-width: 767px) {
     .feedback__wrapper {
+      max-width: 310px;
       padding: 0 15px;
       padding-top: 6px; } }
 
@@ -899,7 +903,8 @@ html {
     opacity: 0.6; }
   @media (max-width: 767px) {
     .feedback__button {
-      width: 100%;
+      width: 290px;
+      margin: 0 auto;
       margin-bottom: 23px; } }
 
 .page-footer__wrapper {
@@ -1056,7 +1061,8 @@ html {
 .page-footer__office {
   display: flex;
   flex-direction: column;
-  padding-right: 8px; }
+  padding-right: 8px;
+  align-items: flex-start; }
   @media (max-width: 1023px) {
     .page-footer__office {
       padding-right: 35px; } }
@@ -1243,6 +1249,9 @@ html {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px; }
+  .popup__form input:hover, .popup__form input:focus {
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.8);
+    outline: none; }
   .popup__form input::placeholder {
     color: #ffffff;
     font-family: "PT Mono", "Courier New", monospace;
@@ -1265,6 +1274,9 @@ html {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px; }
+  .popup__form textarea:hover, .popup__form textarea:focus {
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.8);
+    outline: none; }
   .popup__form textarea::placeholder {
     color: #ffffff;
     font-family: "PT Mono", "Courier New", monospace;
@@ -1282,6 +1294,8 @@ html {
   line-height: 16px;
   color: rgba(255, 255, 255, 0.8);
   position: relative; }
+  .popup__consent + label:hover::before {
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.8); }
   .popup__consent + label::before {
     content: "";
     position: absolute;
@@ -1312,6 +1326,11 @@ html {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 26px; }
+  .popup__button:hover, .popup__button:focus {
+    background-color: #ffffff;
+    color: #00b2ff; }
+  .popup__button:active {
+    opacity: 0.6; }
 
 .popup__close-btn {
   position: absolute;
