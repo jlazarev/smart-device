@@ -139,12 +139,14 @@
 }
 
 .page-footer__nav {
-  margin-right: 162px;
+  margin-right: 50px;
   padding-right: 1px;
+  margin-left: auto;
 
   @media (max-width: $tablet-width) {
     padding-left: 25px;
     margin-right: 22px;
+    margin-left: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -161,13 +163,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  max-height: 120px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  column-count: 2;
 
   @media (max-width: $tablet-width) {
-    max-height: none;
+    column-count: 1;
   }
 
   @media (max-width: $mobile-width) {
@@ -180,7 +179,7 @@
     line-height: 25px;
     color: $bg_dark;
     opacity: 0.5;
-    margin-right: 75px;
+    margin-right: 60px;
 
     &:hover,
     &:focus {
